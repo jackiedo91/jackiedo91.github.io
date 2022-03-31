@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/docker/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/2022-01-22-note-microservices-with-docker-kubernetes/"},"frontmatter":{"title":"Note - Bootstraping Microservices with Docker, Kubernetes and Terraform"}}}]}},"pageContext":{"tag":"docker"}},
+    "staticQueryHashes": ["2841359383"]}

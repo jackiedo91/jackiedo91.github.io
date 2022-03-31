@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/2022-01-22-note-microservices-with-docker-kubernetes/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Jackie's Blog"}},"markdownRemark":{"id":"afa14f15-aaff-5323-bc6f-189cb3e32e5a","excerpt":"xxx xxx","html":"<blockquote>\n<ul>\n<li><a href=\"#builder\">xxx</a></li>\n<li><a href=\"#decorator\">xxx</a></li>\n</ul>\n</blockquote>","frontmatter":{"title":"Note - Bootstraping Microservices with Docker, Kubernetes and Terraform","date":"January 22, 2022","description":"Note - Bootstraping Microservices with Docker, Kubernetes and Terraform"}},"previous":{"fields":{"slug":"/2021-09-20-top-10-mistakes-that-rails-programmers-make/"},"frontmatter":{"title":"10 Sai lầm Rail Developer hay mắc phải"}},"next":{"fields":{"slug":"/2022-03-31-using-interractors-as-work-action-chains/"},"frontmatter":{"title":"Using Interractors as work action chains"}}},"pageContext":{"id":"afa14f15-aaff-5323-bc6f-189cb3e32e5a","previousPostId":"d37eeb09-c3f0-594a-87e0-dfe57ea3bd1f","nextPostId":"4ebf4b94-52a4-5d1c-a9d0-2ae6158d4dcc"}},
+    "staticQueryHashes": ["230163734","2841359383"]}

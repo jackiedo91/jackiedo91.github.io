@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jackie's Blog]]></title><description><![CDATA[Jackie's Blog]]></description><link>https://jackiedo91.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Mar 2022 06:05:09 GMT</lastBuildDate><item><title><![CDATA[Using Interractors as work action chains]]></title><description><![CDATA[xxx xxx]]></description><link>https://jackiedo91.github.io/2022-03-31-using-interractors-as-work-action-chains/</link><guid isPermaLink="false">https://jackiedo91.github.io/2022-03-31-using-interractors-as-work-action-chains/</guid><pubDate>Thu, 31 Mar 2022 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#builder&quot;&gt;xxx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#decorator&quot;&gt;xxx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Note - Bootstraping Microservices with Docker, Kubernetes and Terraform]]></title><description><![CDATA[xxx xxx]]></description><link>https://jackiedo91.github.io/2022-01-22-note-microservices-with-docker-kubernetes/</link><guid isPermaLink="false">https://jackiedo91.github.io/2022-01-22-note-microservices-with-docker-kubernetes/</guid><pubDate>Sat, 22 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#builder&quot;&gt;xxx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#decorator&quot;&gt;xxx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[10 Sai lầm Rail Developer hay mắc phải]]></title><description><![CDATA[#1. Putting too much logic in the controller #2. Putting too much logic in the view #3. Putting too much logic in the model #4. Using…]]></description><link>https://jackiedo91.github.io/2021-09-20-top-10-mistakes-that-rails-programmers-make/</link><guid isPermaLink="false">https://jackiedo91.github.io/2021-09-20-top-10-mistakes-that-rails-programmers-make/</guid><pubDate>Mon, 20 Sep 2021 22:12:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1&quot;&gt;#1. Putting too much logic in the controller&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2&quot;&gt;#2. Putting too much logic in the view&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3&quot;&gt;#3. Putting too much logic in the model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#4. Using generic helper classes as a dumping ground&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#5. Using too many gems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#6. Ignoring your log files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#7. Lack of automated tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#8. Blocking on calls to external services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#9. Getting married to existing database migrations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;#10. Checking sensitive information into source code repositories&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Design Patterns là các best practices bằng các tổ chức và xây dựng code để giải quyết các bài toán cụ thể, mỗi design pattern sẽ nhắm tới một vấn đề cụ thể.&lt;/p&gt;
+&lt;p&gt;Ở trên là các Design Patterns hay được sử dụng trong các dự án Rails, một số hay được dùng ở View, một số dùng ở Model, số còn lại có thể  tự do sử dụng ở mọi nơi.&lt;/p&gt;
+&lt;p&gt;Việc sử dụng design pattern có những điểm lợi và những việc bất lợi riêng (nên có một số người theo style anti-patterns) nhưng nhìn chung mà nói thì lợi nhiều hơn hại.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Một số  &lt;em&gt;&lt;code class=&quot;language-text&quot;&gt;lợi ích&lt;/code&gt;&lt;/em&gt; dễ thấy nhờ việc apply design patterns trong dự án:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thói quen&lt;/strong&gt;: Với một số luồng logic/business nhất định, chúng ta có thể “ép khuôn” nó bằng cách dùng các design pattern để nó theo 1 flow nhất định, không cần phải tốn công suy nghĩ cấu trúc code mới.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cải thiện cách dùng OOP&lt;/strong&gt;: Sau một thời gian làm việc với các patterns bạn sẽ có cái nhìn về các Object ở những góc độ khác nhau từ đó nâng cao trình độ của bản thân.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hiểu thêm về các library&lt;/strong&gt;: Việc apply các patterns giúp bạn thoải mái hơn nhiều khi đọc lại code của các Libraries hay dùng bởi vì code của một library thường được tổ chức và xây dựng theo 1 hoặc nhiều patterns nào đó&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chuẩn hóa&lt;/strong&gt;: Thống nhất style code và các tổ chức code giữa các member trong team. Mọi người sẽ ít bị khó khăn hơn khi đọc code của nhau.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cải thiện cách suy nghĩ&lt;/strong&gt;: Bạn sẽ hấp thu được các ý tưởng đằng sau một design pattern nào đó từ đó giúp bạn khám phá nhiều các mới để tổ chức code base và cấu trúc dự án.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bên cạnh đó cũng có những điểm &lt;em&gt;&lt;code class=&quot;language-text&quot;&gt;bất lợi&lt;/code&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cần kiến thức&lt;/strong&gt;: Việc sử dụng một design pattern trong project yêu cầu mọi thành viên trong team phải có kiến thức về nó, nếu không có thì việc này sẽ cần một chút thời gian để làm quen và tiếp thu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lối mòn suy nghĩ&lt;/strong&gt;: Việc dùng các design pattern khiến chúng ta quen thuộc với “khuôn suy nghĩ” cũ và sáng tạo khi code. Nên nhớ “Luôn luôn có nhiều cách để giải quyết một vấn đề”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overthinking và Overkill&lt;/strong&gt;: Áp dụng design patterns cho 1 use case hoặc scope quá nhỏ là việc không cần thiết và làm phức tạp dự án. Để xác định có nên áp dụng Design Patterns hay không cần sự đồng thuận của các thành viên trong team.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Các Design Pattern phổ biến&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4&gt;&lt;a name=&quot;builder&quot;&gt;&lt;/a&gt;Builder&lt;/h4&gt;
+&lt;p&gt;The Builder pattern makes the construction of complex objects gradual and straightforward. It is also known as Adapter, and its primary purpose is to simplify the object instantiation process.&lt;/p&gt;
+&lt;h6&gt;Vấn đề&lt;/h6&gt;
+&lt;p&gt;Imagine if you were building a highly customized car. You would need multiple stages of development—internal structure or chassis, engine, and related machinery, outer body structure, designing and decals, and other comfort-related installations like dashboard, seats, etc. If you were to represent this process via classes, you would have one colossal class constructor that would take in all of these preferences as arguments. But that can get too cluttered for creating a basic, economy four-wheeler. This is where the concept of builders kicks in.&lt;/p&gt;
+&lt;h6&gt;Giải pháp&lt;/h6&gt;
+&lt;p&gt;Like the way a car goes through a series of steps in an assembly, the builder pattern splits the construction of any object into a series of small and gradual steps. For the car example, there would be a ChassisBuilder, PerformanceBuilder, BodyBuilder, InstallationBuilder, and more, at each step of the car assembly process. The output of each of these builder interfaces would be an input to the next. This way, you don’t need to maintain one huge constructor for your Car class that can get prone to errors.&lt;/p&gt;
+&lt;h6&gt;Use Cases&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Ví dụ cụ thể&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;initialize&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;@path&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PdfFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JpegFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+         &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Các gems giúp code kiểu design pattern này&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h4&gt;&lt;a name=&quot;decorator&quot;&gt;&lt;/a&gt;Decorator&lt;/h4&gt;
+&lt;p&gt;The Builder pattern makes the construction of complex objects gradual and straightforward. It is also known as Adapter, and its primary purpose is to simplify the object instantiation process.&lt;/p&gt;
+&lt;h6&gt;Vấn đề&lt;/h6&gt;
+&lt;p&gt;Imagine if you were building a highly customized car. You would need multiple stages of development—internal structure or chassis, engine, and related machinery, outer body structure, designing and decals, and other comfort-related installations like dashboard, seats, etc. If you were to represent this process via classes, you would have one colossal class constructor that would take in all of these preferences as arguments. But that can get too cluttered for creating a basic, economy four-wheeler. This is where the concept of builders kicks in.&lt;/p&gt;
+&lt;h6&gt;Giải pháp&lt;/h6&gt;
+&lt;p&gt;Like the way a car goes through a series of steps in an assembly, the builder pattern splits the construction of any object into a series of small and gradual steps. For the car example, there would be a ChassisBuilder, PerformanceBuilder, BodyBuilder, InstallationBuilder, and more, at each step of the car assembly process. The output of each of these builder interfaces would be an input to the next. This way, you don’t need to maintain one huge constructor for your Car class that can get prone to errors.&lt;/p&gt;
+&lt;h6&gt;Use Cases&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Ví dụ cụ thể&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;initialize&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;@path&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PdfFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JpegFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+         &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Các gems giúp code kiểu design pattern này&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Một vài design patterns phổ biến trong Rails - Phần 01]]></title><description><![CDATA[Builder Decorator Form Interactor Observer Policy Presenter Query Service Value Design Patterns là các best practices bằng các tổ chức và…]]></description><link>https://jackiedo91.github.io/2021-09-01-popular-design-patterns-in-rails-01/</link><guid isPermaLink="false">https://jackiedo91.github.io/2021-09-01-popular-design-patterns-in-rails-01/</guid><pubDate>Wed, 01 Sep 2021 22:12:03 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#builder&quot;&gt;Builder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#decorator&quot;&gt;Decorator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Form&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Interactor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Observer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Policy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Presenter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Query&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Value&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Design Patterns là các best practices bằng các tổ chức và xây dựng code để giải quyết các bài toán cụ thể, mỗi design pattern sẽ nhắm tới một vấn đề cụ thể.&lt;/p&gt;
+&lt;p&gt;Ở trên là các Design Patterns hay được sử dụng trong các dự án Rails, một số hay được dùng ở View, một số dùng ở Model, số còn lại có thể  tự do sử dụng ở mọi nơi.&lt;/p&gt;
+&lt;p&gt;Việc sử dụng design pattern có những điểm lợi và những việc bất lợi riêng (nên có một số người theo style anti-patterns) nhưng nhìn chung mà nói thì lợi nhiều hơn hại.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Một số  &lt;em&gt;&lt;code class=&quot;language-text&quot;&gt;lợi ích&lt;/code&gt;&lt;/em&gt; dễ thấy nhờ việc apply design patterns trong dự án:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thói quen&lt;/strong&gt;: Với một số luồng logic/business nhất định, chúng ta có thể “ép khuôn” nó bằng cách dùng các design pattern để nó theo 1 flow nhất định, không cần phải tốn công suy nghĩ cấu trúc code mới.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cải thiện cách dùng OOP&lt;/strong&gt;: Sau một thời gian làm việc với các patterns bạn sẽ có cái nhìn về các Object ở những góc độ khác nhau từ đó nâng cao trình độ của bản thân.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hiểu thêm về các library&lt;/strong&gt;: Việc apply các patterns giúp bạn thoải mái hơn nhiều khi đọc lại code của các Libraries hay dùng bởi vì code của một library thường được tổ chức và xây dựng theo 1 hoặc nhiều patterns nào đó&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chuẩn hóa&lt;/strong&gt;: Thống nhất style code và các tổ chức code giữa các member trong team. Mọi người sẽ ít bị khó khăn hơn khi đọc code của nhau.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cải thiện cách suy nghĩ&lt;/strong&gt;: Bạn sẽ hấp thu được các ý tưởng đằng sau một design pattern nào đó từ đó giúp bạn khám phá nhiều các mới để tổ chức code base và cấu trúc dự án.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bên cạnh đó cũng có những điểm &lt;em&gt;&lt;code class=&quot;language-text&quot;&gt;bất lợi&lt;/code&gt;&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cần kiến thức&lt;/strong&gt;: Việc sử dụng một design pattern trong project yêu cầu mọi thành viên trong team phải có kiến thức về nó, nếu không có thì việc này sẽ cần một chút thời gian để làm quen và tiếp thu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lối mòn suy nghĩ&lt;/strong&gt;: Việc dùng các design pattern khiến chúng ta quen thuộc với “khuôn suy nghĩ” cũ và sáng tạo khi code. Nên nhớ “Luôn luôn có nhiều cách để giải quyết một vấn đề”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overthinking và Overkill&lt;/strong&gt;: Áp dụng design patterns cho 1 use case hoặc scope quá nhỏ là việc không cần thiết và làm phức tạp dự án. Để xác định có nên áp dụng Design Patterns hay không cần sự đồng thuận của các thành viên trong team.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Các Design Pattern phổ biến&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h4&gt;&lt;a name=&quot;builder&quot;&gt;&lt;/a&gt;Builder&lt;/h4&gt;
+&lt;p&gt;The Builder pattern makes the construction of complex objects gradual and straightforward. It is also known as Adapter, and its primary purpose is to simplify the object instantiation process.&lt;/p&gt;
+&lt;h6&gt;Vấn đề&lt;/h6&gt;
+&lt;p&gt;Imagine if you were building a highly customized car. You would need multiple stages of development—internal structure or chassis, engine, and related machinery, outer body structure, designing and decals, and other comfort-related installations like dashboard, seats, etc. If you were to represent this process via classes, you would have one colossal class constructor that would take in all of these preferences as arguments. But that can get too cluttered for creating a basic, economy four-wheeler. This is where the concept of builders kicks in.&lt;/p&gt;
+&lt;h6&gt;Giải pháp&lt;/h6&gt;
+&lt;p&gt;Like the way a car goes through a series of steps in an assembly, the builder pattern splits the construction of any object into a series of small and gradual steps. For the car example, there would be a ChassisBuilder, PerformanceBuilder, BodyBuilder, InstallationBuilder, and more, at each step of the car assembly process. The output of each of these builder interfaces would be an input to the next. This way, you don’t need to maintain one huge constructor for your Car class that can get prone to errors.&lt;/p&gt;
+&lt;h6&gt;Use Cases&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Ví dụ cụ thể&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;initialize&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;@path&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PdfFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JpegFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+         &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Các gems giúp code kiểu design pattern này&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h4&gt;&lt;a name=&quot;decorator&quot;&gt;&lt;/a&gt;Decorator&lt;/h4&gt;
+&lt;p&gt;The Builder pattern makes the construction of complex objects gradual and straightforward. It is also known as Adapter, and its primary purpose is to simplify the object instantiation process.&lt;/p&gt;
+&lt;h6&gt;Vấn đề&lt;/h6&gt;
+&lt;p&gt;Imagine if you were building a highly customized car. You would need multiple stages of development—internal structure or chassis, engine, and related machinery, outer body structure, designing and decals, and other comfort-related installations like dashboard, seats, etc. If you were to represent this process via classes, you would have one colossal class constructor that would take in all of these preferences as arguments. But that can get too cluttered for creating a basic, economy four-wheeler. This is where the concept of builders kicks in.&lt;/p&gt;
+&lt;h6&gt;Giải pháp&lt;/h6&gt;
+&lt;p&gt;Like the way a car goes through a series of steps in an assembly, the builder pattern splits the construction of any object into a series of small and gradual steps. For the car example, there would be a ChassisBuilder, PerformanceBuilder, BodyBuilder, InstallationBuilder, and more, at each step of the car assembly process. The output of each of these builder interfaces would be an input to the next. This way, you don’t need to maintain one huge constructor for your Car class that can get prone to errors.&lt;/p&gt;
+&lt;h6&gt;Use Cases&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Ví dụ cụ thể&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;initialize&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token variable&quot;&gt;@path&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; path
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;PdfFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;JpegFileParser&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;BaseParser&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token method-definition&quot;&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;/span&gt;
+         &lt;span class=&quot;token comment&quot;&gt;# return a string&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h6&gt;Các gems giúp code kiểu design pattern này&lt;/h6&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- aaa
+- bbb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>

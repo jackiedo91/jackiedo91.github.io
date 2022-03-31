@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/2022-03-31-using-interractors-as-work-action-chains/",
+    "result": {"data":{"site":{"siteMetadata":{"title":"Jackie's Blog"}},"markdownRemark":{"id":"4ebf4b94-52a4-5d1c-a9d0-2ae6158d4dcc","excerpt":"xxx xxx","html":"<blockquote>\n<ul>\n<li><a href=\"#builder\">xxx</a></li>\n<li><a href=\"#decorator\">xxx</a></li>\n</ul>\n</blockquote>","frontmatter":{"title":"Using Interractors as work action chains","date":"March 31, 2022","description":"Using Interractors as work action chains"}},"previous":{"fields":{"slug":"/2022-01-22-note-microservices-with-docker-kubernetes/"},"frontmatter":{"title":"Note - Bootstraping Microservices with Docker, Kubernetes and Terraform"}},"next":null},"pageContext":{"id":"4ebf4b94-52a4-5d1c-a9d0-2ae6158d4dcc","previousPostId":"afa14f15-aaff-5323-bc6f-189cb3e32e5a","nextPostId":null}},
+    "staticQueryHashes": ["230163734","2841359383"]}

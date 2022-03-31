@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-js",
+    "path": "/tags/rails/",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":3,"edges":[{"node":{"fields":{"slug":"/2022-03-31-using-interractors-as-work-action-chains/"},"frontmatter":{"title":"Using Interractors as work action chains"}}},{"node":{"fields":{"slug":"/2021-09-20-top-10-mistakes-that-rails-programmers-make/"},"frontmatter":{"title":"10 Sai lầm Rail Developer hay mắc phải"}}},{"node":{"fields":{"slug":"/2021-09-01-popular-design-patterns-in-rails-01/"},"frontmatter":{"title":"Một vài design patterns phổ biến trong Rails - Phần 01"}}}]}},"pageContext":{"tag":"rails"}},
+    "staticQueryHashes": ["2841359383"]}
